@@ -1,4 +1,4 @@
-package pgxsubscription
+package pgxcontent
 
 import (
 	"database/sql"
