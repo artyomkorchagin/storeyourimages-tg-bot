@@ -7,7 +7,7 @@ import (
 )
 
 type Reader interface {
-	ReadContent(ctx context.Context, userID string, offset int) ([]string, error)
+	ReadContent(ctx context.Context, userID int64, offset int) ([]string, error)
 }
 
 type Writer interface {

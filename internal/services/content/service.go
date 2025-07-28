@@ -16,7 +16,7 @@ func NewService(repo ReadWriter) *Service {
 	}
 }
 
-func (s *Service) ReadContent(ctx context.Context, userID string, offset int) ([]string, error) {
+func (s *Service) ReadContent(ctx context.Context, userID int64, offset int) ([]string, error) {
 	return s.repo.ReadContent(ctx, userID, offset)
 }
 

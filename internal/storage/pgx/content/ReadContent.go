@@ -5,7 +5,7 @@ import (
 	"fmt"
 )
 
-func (r *Repository) ReadContent(ctx context.Context, userID string, offset int) ([]string, error) {
+func (r *Repository) ReadContent(ctx context.Context, userID int64, offset int) ([]string, error) {
 	rows, err := r.db.QueryContext(ctx, `
         SELECT filepath 
         FROM content_data 
