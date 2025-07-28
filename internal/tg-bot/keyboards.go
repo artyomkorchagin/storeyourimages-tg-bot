@@ -6,7 +6,16 @@ import (
 
 var newKeyboard = tgbotapi.NewReplyKeyboard(
 	tgbotapi.NewKeyboardButtonRow(
-		tgbotapi.NewKeyboardButton("залогинься"),
-		tgbotapi.NewKeyboardButton("помощь"),
+		tgbotapi.NewKeyboardButton("Просмотреть изображения"),
+	),
+)
+
+var imageKeyboard = tgbotapi.NewInlineKeyboardMarkup(
+	tgbotapi.NewInlineKeyboardRow(
+		tgbotapi.NewInlineKeyboardButtonData("<", "prev"),
+		tgbotapi.NewInlineKeyboardButtonData(">", "next"),
+	),
+	tgbotapi.NewInlineKeyboardRow(
+		tgbotapi.NewInlineKeyboardButtonData("Перейти в режим удаления", "delete"),
 	),
 )
